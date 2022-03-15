@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+alert("Welcome to our website");
+function a(){
+var r,area;
+ r=prompt("Enter the radius");
+ area=3.14*r*r;
+ document.write("The area is:"+area);
+}
+function b(){
+	var a;
+    a=document.getElementById("aa").value;
+	document.write("The colour selected is "+a);
+}
+function c(){
+	var dat;
+	var dat=new Date();
+	var day=dat.getDay();
+	document.write("The date is "+dat);
+	document.write("<br>");
+	document.write("The day is "+day);
+}
+function d(){
+	var a;
+	a=document.getElementById("pic");
+	a.style.height="100px";
+	a.style.width="100px";
+}
+function e(){
+	var a,b;
+	a=prompt("Enter a string");
+	b=a.length;
+	document.write(b);
+}
+function f(){
+	var a,b;
+	a=prompt("Enter a string");
+	b=a.charAt("2");
+	document.write(b);
+}
+function g(){
+	var a,b;
+	a=prompt("Enter a string");
+	b=a.toUpperCase();
+	document.write(b);
+}
+function h(){
+	var a,b;
+	a=prompt("Enter a string");
+	b=a.toLowerCase();
+	document.write(b);
+}
+function i(){
+	var a=document.getElementById("name").value;
+	document.write("Hello,"+a);
+	document.write(" Welcome Here");
+}
+function j(){
+	var a,b;
+	a=document.getElementById("c").value;
+	b=a.replace("tuesday","wednesday");
+	document.write(b);
+}
+function k(){
+	var a;
+a=document.getElementsByClassName("aaa");
+a[0].innerHTML=("Change");
+a[1].innerHTML=("Change Again");
+}
+
+function l(){
+	var a;
+var a=document.getElementById("par");
+a.style.color="red";
+}
+function m(){
+	var a;
+a=document.getElementsByClassName("aa");
+a[0].style.backgroundColor="red";
+a[1].style.backgroundColor="red";
+a[1].style.fontSize="50px";
+}
+function n()
+{
+	var a=document.getElementById("pp");
+	var b=a.value.toLowerCase();
+	document.write(b);
+
+}
+function o(){
+	var date,year;
+	var date=new Date();
+	var year=date.getFullYear();
+	document.write("The year is "+year);
+	document.write("The date is"+date);
+}
+function p(){
+	
+	window.history.go(-2);
+}
+function q(){ 
+	
+	var a=document.form.protocol.value;
+	var b=document.form.URL.value;
+	var c=document.form.path.value;
+	window.location.href=a+b+c;
+}
+function r(){
+	var a;
+	a=getElementById("id");
+	a[1].innerHTML="Change";
+
+}
+function s(){
+	var a=document.getElementById("text");
+	var b=a.style.background="pink";
+}
+function t(){
+	var a=document.getElementById("text");
+	var b=a.style.background="red";
+}
+function u(){
+	var a=document.getElementById("ch").value;
+	document.getElementById("ss").style.backgroundColor=a;
+}
+function v() {
+    var a=navigator.javaEnabled();
+    document.write(a);
+}
+function w(){
+	var a=window.length;
+	document.write(a);
+}
+function x(){
+	var a=window.location.href;
+	document.write(a);
+}
+</script>
+</head>
+<body id="ss">
+<p>To find out the area click the button</p><br>
+<button onclick="a()">Press</button><br><br>
+<select id="aa" onchange="b()">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+</select><br><br>
+<p>To print time</p>
+<button id="id" onclick="c()">Click</button><br><br>
+<img src="pic.jpg" height="50px" width="50px" id="pic" onmouseover="d()"><br><br>
+<p>To find out the length of string press the button</p><br>
+<button onclick="e()">Press</button><br>
+<p>To find out the position of an element</p><br>
+<button onclick="f()">Press</button><br>
+<p>To print the string in upper case</p><br>
+<button onclick="g()">Press</button><br>
+<p>To print the string in lower case</p><br>
+<button onclick="h()">Press</button><br><br>
+<input type="text" id="name">Username<br><br><button onclick="i()">Submit</button><br><br>
+<input type="text" id="c"><br><br>
+<button onclick="j()">press</button><br><br>
+<p class="aaa">This is a paragraph</p>
+<br>
+<p class="aaa">This is the second one</p><br>
+<button onclick="k()">Press</button><br>
+<p class="aa">This is a paragraph</p>
+<br>
+<p class="aa">This is the second one</p><br>
+<button onclick="m()">Press</button><br>
+<p id="par" onmouseover="l()">Chitkara University</p><br><br>
+<p> To lower case</p><br>
+<input type="text" id="pp"></textarea><br><br>
+<button onclick="n()">Press</button><br><br>
+<p>To print year</p><br>
+<button onclick="o()">Click</button><br><br>
+<button onclick="p()">Back</button><br><br>
+<form name="form">
+<input type="text" name="protocol" placeholder="https://">
+<input type="text" name="URL" placeholder="www.google.com">
+<input type="text" name="path" placeholder="/"></form>
+<br>
+<button onclick="q()">Press</button><br><br>
+<p id="id">This is a paragraph</p><br>
+<p id="id">This is a second paragraph</p><br>
+<button onclick="r()">Press</button><br><br>
+<input type="text" id="text" onfocus="s()" onblur="t()"><br><br>
+<p>To change the background color</p><br>
+<select id="ch" onchange="u()">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+<option value="white">White</option>
+</select><br><br>
+<button onclick="v()">Press</button><br><br>
+<button onclick="w()">Press</button><br><br>
+<button onclick="x()">Press</button><br><br>
+</body>
+</html>
